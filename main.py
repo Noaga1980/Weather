@@ -7,7 +7,7 @@ import streamlit as st
 api_key = st.secrets["api_key"]
 
 # Ask city Name From the User
-city = input("Enter the city name: ")
+city = st.text_input("Enter the city name: ")
 
 # The URL
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
@@ -27,10 +27,10 @@ if response.status_code == 200:
     humidity = data['main']['humidity']
 
     # print the results
-    print(f"Weather in {city_name}:")
-    print(f"Temperature: {temperature}°C")
-    print(f"Description: {weather_description}")
-    print(f"Humidity: {humidity}%")
+    st.write(f"Weather in {city_name}:")
+    st.write(f"Temperature: {temperature}°C")
+    st.write(f"Description: {weather_description}")
+    st.write(f"Humidity: {humidity}%")
 else:
     # Error handling
-    print(f"Failed to retrieve data: {response.status_code}")
+    st.write(f"Failed to retrieve data: {response.status_code}")
