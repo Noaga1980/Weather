@@ -2,7 +2,7 @@
 
 import requests
 #Import API KEY from secret
-from secrets import api_key
+#from secrets import api_key
 
 
 # Ask city Name From the User
