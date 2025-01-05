@@ -3,7 +3,8 @@
 import requests
 #Import API KEY from secret
 #from secrets import api_key
-
+import streamlit as st
+api_key = st.secrets["api_key"]
 
 # Ask city Name From the User
 city = input("Enter the city name: ")
