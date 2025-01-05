@@ -1,9 +1,9 @@
 
 
 import requests
+#Import API KEY from secret
+from secrets import api_key
 
-# Ask API from the User
-api_key = input("What is your API key? ")
 
 # Ask city Name From the User
 city = input("Enter the city name: ")
